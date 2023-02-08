@@ -48,7 +48,7 @@ function Bridge() {
 
   return (
     <Page>
-      <Script crossOrigin="anonymous" src={'/js/element.js'} />
+      <Script crossOrigin="anonymous" src={STARGATE_JS.src} integrity={STARGATE_JS.integrity} />
       <Flex
         flexDirection="column"
         width={['100%', null, '420px']}
