@@ -14,8 +14,8 @@ const ThemeSwitcher: React.FC<React.PropsWithChildren<Props>> = ({ isDark, toggl
     checkedColor="textDisabled"
     onChange={() => toggleTheme(!isDark)}
     scale="md"
-    startIcon={(isActive = false) => <SunIcon color={isActive ? "warning" : "backgroundAlt"} />}
-    endIcon={(isActive = false) => <MoonIcon color={isActive ? "secondary" : "backgroundAlt"} />}
+    startIcon={(isActive = false) => <SunIcon color={isActive ? "success" : "backgroundAlt"} />}
+    endIcon={(isActive = false) => <MoonIcon color={isActive ? "success" : "backgroundAlt"} />}
   />
 );
 
