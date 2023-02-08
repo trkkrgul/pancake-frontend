@@ -1,3 +1,4 @@
+import { useTheme } from "@pancakeswap/hooks";
 import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
@@ -41,27 +42,43 @@ const StyledLink = styled("a")`
   }
 `;
 
+const StyledText = styled("p")`
+  display: flex;
+  ${({ theme }) => theme.mediaQueries.xs} {
+    display: none;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    display: block;
+  }
+  .mobile-icon {
+    width: 32px;
+    ${({ theme }) => theme.mediaQueries.lg} {
+      display: none;
+    }
+  }
+`;
+
 const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
+  const { theme } = useTheme();
   const { linkComponent } = useContext(MenuContext);
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" />
+      <StyledText>Sakai Vault</StyledText>
     </>
   );
 
   return (
     <Flex alignItems="center">
-      {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
-          {innerLogo}
-        </StyledLink>
-      ) : (
-        <StyledLink href={href} as={linkComponent} aria-label="Pancake home page">
-          {innerLogo}
-        </StyledLink>
-      )}
+      <StyledLink
+        as="a"
+        href={"https://bridge.sakaivault.io"}
+        aria-label="sakai"
+        style={{ alignItems: "center", gap: "0.5rem" }}
+      >
+        {innerLogo}
+      </StyledLink>
     </Flex>
   );
 };

@@ -14,7 +14,9 @@ const Page = styled.div`
   align-items: center;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.gradientBubblegum};
-
+  background-image: url(/bg-wires.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   ${({ theme }) => theme.mediaQueries.sm} {
     display: grid;
     place-content: center;
@@ -79,16 +81,13 @@ function PoweredBy() {
       <Text small color="textSubtle" mr="8px">
         Powered By
       </Text>
-      <a href="https://stargate.finance" target="_blank" rel="noreferrer noopener">
+      <a href="https://sakaivault.io" target="_blank" rel="noreferrer noopener">
         <Image
-          width={78}
-          height={20}
-          src="/stargate.png"
-          alt="Powered By Stargate"
+          width={120}
+          height={24}
+          src={isDark ? '/logo-dark.svg' : '/logo-light.svg'}
+          alt="Powered By Sakai Vault"
           unoptimized
-          style={{
-            filter: isDark ? 'invert(1)' : 'unset',
-          }}
         />
       </a>
     </Flex>

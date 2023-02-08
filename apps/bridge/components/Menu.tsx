@@ -74,10 +74,7 @@ const TxnLink = styled(Link)`
   }
 `
 
-const MenuConfig = [
-  { title: 'Bridge', href: '/' },
-  { title: 'Aptos', href: '/aptos' },
-]
+const MenuConfig = [{ title: 'Bridge', href: '/' }]
 
 export function Menu() {
   const theme = useTheme()
@@ -97,7 +94,7 @@ export function Menu() {
               </NextLink>
             </Box>
           ))}
-          <a href="https://pancakeswap.finance/swap" target="_blank" rel="noreferrer noopener">
+          <a href="https://dex.sakaivault.io" target="_blank" rel="noreferrer noopener">
             <StyledMenuItem>Swap</StyledMenuItem>
           </a>
         </Flex>

@@ -9,16 +9,13 @@ const PoweredBy = () => {
       <Text small color="textSubtle" mr="8px">
         Powered By
       </Text>
-      <a href="https://layerzero.network/" target="_blank" rel="noreferrer noopener">
+      <a href="https://sakaivault.io/" target="_blank" rel="noreferrer noopener">
         <Image
-          width={75}
-          height={15}
-          src="/layerZero.svg"
-          alt="Powered By LayerZero"
+          width={120}
+          height={24}
+          src={isDark ? '/logo-dark.svg' : '/logo-light.svg'}
+          alt="Powered By Sakai Vault"
           unoptimized
-          style={{
-            filter: isDark ? 'unset' : 'invert(1)',
-          }}
         />
       </a>
     </Flex>

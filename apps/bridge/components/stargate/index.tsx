@@ -24,6 +24,9 @@ export const StargateWidget = ({ theme }: { theme: PancakeTheme }) => {
         .StgHeader .MuiTypography-subtitle1 {
           visibility: hidden;
         }
+        .jss1563 {
+          display: none;
+        }
 
         .StgHeader .MuiTypography-subtitle1::after {
           font-family: ${FontFamily.KANIT};

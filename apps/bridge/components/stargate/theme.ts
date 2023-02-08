@@ -21,7 +21,7 @@ function pointsToRem(size: number) {
 // theme definition
 
 export const FontFamily = {
-  KANIT: "'Kanit', sans-serif",
+  KANIT: "'Montserrat', sans-serif",
 }
 
 const FontWeight = {
@@ -69,8 +69,8 @@ const darkPalette = createPalette({
   },
   divider: darkColors.cardBorder,
   background: {
-    paper: darkColors.backgroundAlt,
-    default: darkColors.primary,
+    paper: 'rgb(14, 23, 32)',
+    default: '#080f16',
   },
   action: {
     disabled: darkColors.textDisabled,
