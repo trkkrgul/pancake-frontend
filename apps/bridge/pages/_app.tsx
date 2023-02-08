@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Sakai Vault Bridge | Cross-Chain Bridge Protocol | Bridge your tokens fast & secure!"
         />
-        <meta name="theme-color" content={'#08060b'} />
+        <meta name="theme-color" content="#08060b" />
         <meta
           name="twitter:image"
           content="https://2447953470-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FncQ1V77B1a9EbyKYD1xJ%2Fuploads%2FpSBt196gLA1CrgWtYazd%2F325624681_1433246087420321_5902325025840769009_n.jpg?alt=media&token=049f6c4b-30a3-47ee-9967-32b9ad97ed31"
