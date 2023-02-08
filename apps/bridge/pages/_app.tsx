@@ -7,6 +7,7 @@ import { createGlobalStyle } from 'styled-components'
 import { ThemeProvider as NextThemeProvider, useTheme as useNextTheme } from 'next-themes'
 import Head from 'next/head'
 import { Menu } from '../components/Menu'
+import { useTheme } from '@pancakeswap/hooks'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
@@ -54,6 +55,7 @@ function useIsMounted() {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const isMounted = useIsMounted()
+  const { isDark } = useTheme()
   return (
     <>
       <Head>
@@ -65,7 +67,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Sakai Vault Bridge | Cross-Chain Bridge Protocol | Bridge your tokens fast & secure!"
         />
-        <meta name="theme-color" content="#1FC7D4" />
+        <meta name="theme-color" content={isDark ? '#08060b' : '#faf9fa'} />
         <meta
           name="twitter:image"
           content="https://2447953470-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FncQ1V77B1a9EbyKYD1xJ%2Fuploads%2FpSBt196gLA1CrgWtYazd%2F325624681_1433246087420321_5902325025840769009_n.jpg?alt=media&token=049f6c4b-30a3-47ee-9967-32b9ad97ed31"

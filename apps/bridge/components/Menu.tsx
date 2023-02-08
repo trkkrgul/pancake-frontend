@@ -84,7 +84,7 @@ export function Menu() {
   return (
     <Flex height="56px" bg="backgroundAlt" px="16px" alignItems="center" justifyContent="space-between" zIndex={9}>
       <Flex>
-        <Logo href="https://pancakeswap.finance" />
+        <Logo href="https://bridge.sakaivault.io" />
 
         <Flex pl={['10px', null, '50px']}>
           {MenuConfig.map((menu) => (

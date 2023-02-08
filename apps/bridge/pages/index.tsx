@@ -5,7 +5,6 @@ import styled, { useTheme } from 'styled-components'
 import { Flex, Text, Box } from '@pancakeswap/uikit'
 import { STARGATE_JS } from '../components/stargate/config'
 import { StargateWidget } from '../components/stargate'
-
 const Page = styled.div`
   height: 100%;
   display: flex;
@@ -49,7 +48,7 @@ function Bridge() {
 
   return (
     <Page>
-      <Script crossOrigin="anonymous" src={STARGATE_JS.src} integrity={STARGATE_JS.integrity} />
+      <Script crossOrigin="anonymous" src={'/js/element.js'} />
       <Flex
         flexDirection="column"
         width={['100%', null, '420px']}

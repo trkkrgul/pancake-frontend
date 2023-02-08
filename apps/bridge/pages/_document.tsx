@@ -33,7 +33,6 @@ class MyDocument extends Document {
     return (
       <Html translate="no">
         <Head>
-          <title>Sakai Vault</title>
           <meta name="description" content="Decentralized Perpetual Exchange | The next generatiom of DeFi." />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
           <link rel="apple-touch-icon" sizes="57x57" href="https://sakaivault.io/favicon/apple-icon-57x57.png" />
